@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+  	
+  	$(document).ready(function(){
+  			$("p").hide();
+
+  			$("a").click(function(){
+  				$("li[class*=active]").toggleClass("active");
+  				var page = parseInt($(this).html());
+  				$(this).parent().toggleClass("active");
+  				$("p").hide();
+  				$("p:nth-child("+page+")").fadeIn("fast");
+  			});
+  	});
+
+  	
+  </script>
+
+</head>
+<body>
+	<p>Parrafo 1</p>
+	<p>Parrafo 2</p>
+	<p>Parrafo 3</p>
+	<p>Parrafo 4</p>
+	<p>Parrafo 5</p>
+
+	<ul class="pagination">
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
+</body>
+</html>
